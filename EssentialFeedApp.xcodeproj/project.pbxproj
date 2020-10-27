@@ -82,6 +82,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		923EFD2B254817F7002F19D9 /* Feed Feature */ = {
+			isa = PBXGroup;
+			children = (
+				923EFD21254816C1002F19D9 /* FeedItem.swift */,
+				923EFD2625481714002F19D9 /* FeedLoader.swift */,
+			);
+			path = "Feed Feature";
+			sourceTree = "<group>";
+		};
 		9277DE092547F31300AA3AA9 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +115,7 @@
 		9277DE142547F31300AA3AA9 /* EssentialFeedApp */ = {
 			isa = PBXGroup;
 			children = (
+				923EFD2B254817F7002F19D9 /* Feed Feature */,
 				9277DE152547F31300AA3AA9 /* AppDelegate.swift */,
 				9277DE172547F31300AA3AA9 /* SceneDelegate.swift */,
 				9277DE192547F31300AA3AA9 /* ViewController.swift */,
@@ -113,8 +123,6 @@
 				9277DE1E2547F31400AA3AA9 /* Assets.xcassets */,
 				9277DE202547F31400AA3AA9 /* LaunchScreen.storyboard */,
 				9277DE232547F31400AA3AA9 /* Info.plist */,
-				923EFD21254816C1002F19D9 /* FeedItem.swift */,
-				923EFD2625481714002F19D9 /* FeedLoader.swift */,
 			);
 			path = EssentialFeedApp;
 			sourceTree = "<group>";
