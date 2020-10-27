@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		923EFD1D25481687002F19D9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 923EFD1C25481687002F19D9 /* README.md */; };
 		923EFD22254816C1002F19D9 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923EFD21254816C1002F19D9 /* FeedItem.swift */; };
+		923EFD2725481714002F19D9 /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923EFD2625481714002F19D9 /* FeedLoader.swift */; };
 		9277DE162547F31300AA3AA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9277DE152547F31300AA3AA9 /* AppDelegate.swift */; };
 		9277DE182547F31300AA3AA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9277DE172547F31300AA3AA9 /* SceneDelegate.swift */; };
 		9277DE1A2547F31300AA3AA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9277DE192547F31300AA3AA9 /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		923EFD1C25481687002F19D9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		923EFD21254816C1002F19D9 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		923EFD2625481714002F19D9 /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
 		9277DE122547F31300AA3AA9 /* EssentialFeedApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EssentialFeedApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9277DE152547F31300AA3AA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9277DE172547F31300AA3AA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				9277DE202547F31400AA3AA9 /* LaunchScreen.storyboard */,
 				9277DE232547F31400AA3AA9 /* Info.plist */,
 				923EFD21254816C1002F19D9 /* FeedItem.swift */,
+				923EFD2625481714002F19D9 /* FeedLoader.swift */,
 			);
 			path = EssentialFeedApp;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				923EFD22254816C1002F19D9 /* FeedItem.swift in Sources */,
 				9277DE1A2547F31300AA3AA9 /* ViewController.swift in Sources */,
 				9277DE162547F31300AA3AA9 /* AppDelegate.swift in Sources */,
+				923EFD2725481714002F19D9 /* FeedLoader.swift in Sources */,
 				9277DE182547F31300AA3AA9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
