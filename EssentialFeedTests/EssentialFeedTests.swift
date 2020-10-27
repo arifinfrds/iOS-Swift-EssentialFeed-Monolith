@@ -1,12 +1,12 @@
 //
-//  EssentialFeedAppTests.swift
-//  EssentialFeedAppTests
+//  EssentialFeedTests.swift
+//  EssentialFeedTests
 //
 //  Created by Arifin Firdaus on 27/10/20.
 //
 
 import XCTest
-@testable import EssentialFeedApp
+@testable import EssentialFeed
 
 class RemoteFeedLoaderTests: XCTestCase {
     
@@ -46,3 +46,4 @@ class RemoteFeedLoaderTests: XCTestCase {
     }
     
 }
+
