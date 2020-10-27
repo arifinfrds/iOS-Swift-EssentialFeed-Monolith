@@ -7,20 +7,20 @@
 
 import Foundation
 
-class RemoteFeedLoader {
-    let url: URL
-    let client: HTTPClient
+public class RemoteFeedLoader {
+    private let url: URL
+    private let client: HTTPClient
     
-    init(url: URL, client: HTTPClient) {
+    public init(url: URL, client: HTTPClient) {
         self.client = client
         self.url = url
     }
     
-    func load() {
+    public func load() {
         client.get(from: url)
     }
 }
 
-protocol HTTPClient {
+public protocol HTTPClient {
     func get(from url: URL)
 }
