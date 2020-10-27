@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		923EFD1D25481687002F19D9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 923EFD1C25481687002F19D9 /* README.md */; };
+		923EFD22254816C1002F19D9 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923EFD21254816C1002F19D9 /* FeedItem.swift */; };
 		9277DE162547F31300AA3AA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9277DE152547F31300AA3AA9 /* AppDelegate.swift */; };
 		9277DE182547F31300AA3AA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9277DE172547F31300AA3AA9 /* SceneDelegate.swift */; };
 		9277DE1A2547F31300AA3AA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9277DE192547F31300AA3AA9 /* ViewController.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		923EFD1C25481687002F19D9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		923EFD21254816C1002F19D9 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		9277DE122547F31300AA3AA9 /* EssentialFeedApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EssentialFeedApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9277DE152547F31300AA3AA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9277DE172547F31300AA3AA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +83,7 @@
 		9277DE092547F31300AA3AA9 = {
 			isa = PBXGroup;
 			children = (
+				923EFD1C25481687002F19D9 /* README.md */,
 				9277DE142547F31300AA3AA9 /* EssentialFeedApp */,
 				9277DE2B2547F31500AA3AA9 /* EssentialFeedAppTests */,
 				9277DE362547F31500AA3AA9 /* EssentialFeedAppUITests */,
@@ -106,6 +111,7 @@
 				9277DE1E2547F31400AA3AA9 /* Assets.xcassets */,
 				9277DE202547F31400AA3AA9 /* LaunchScreen.storyboard */,
 				9277DE232547F31400AA3AA9 /* Info.plist */,
+				923EFD21254816C1002F19D9 /* FeedItem.swift */,
 			);
 			path = EssentialFeedApp;
 			sourceTree = "<group>";
@@ -233,6 +239,7 @@
 			files = (
 				9277DE222547F31400AA3AA9 /* LaunchScreen.storyboard in Resources */,
 				9277DE1F2547F31400AA3AA9 /* Assets.xcassets in Resources */,
+				923EFD1D25481687002F19D9 /* README.md in Resources */,
 				9277DE1D2547F31300AA3AA9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				923EFD22254816C1002F19D9 /* FeedItem.swift in Sources */,
 				9277DE1A2547F31300AA3AA9 /* ViewController.swift in Sources */,
 				9277DE162547F31300AA3AA9 /* AppDelegate.swift in Sources */,
 				9277DE182547F31300AA3AA9 /* SceneDelegate.swift in Sources */,
