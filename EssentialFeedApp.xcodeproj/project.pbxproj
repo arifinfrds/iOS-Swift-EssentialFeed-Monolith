@@ -16,7 +16,7 @@
 		9277DE1D2547F31300AA3AA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9277DE1B2547F31300AA3AA9 /* Main.storyboard */; };
 		9277DE1F2547F31400AA3AA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9277DE1E2547F31400AA3AA9 /* Assets.xcassets */; };
 		9277DE222547F31400AA3AA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9277DE202547F31400AA3AA9 /* LaunchScreen.storyboard */; };
-		9277DE2D2547F31500AA3AA9 /* EssentialFeedAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9277DE2C2547F31500AA3AA9 /* EssentialFeedAppTests.swift */; };
+		9277DE2D2547F31500AA3AA9 /* RemoteFeedLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9277DE2C2547F31500AA3AA9 /* RemoteFeedLoaderTests.swift */; };
 		9277DE382547F31500AA3AA9 /* EssentialFeedAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9277DE372547F31500AA3AA9 /* EssentialFeedAppUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +50,7 @@
 		9277DE212547F31400AA3AA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9277DE232547F31400AA3AA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9277DE282547F31500AA3AA9 /* EssentialFeedAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9277DE2C2547F31500AA3AA9 /* EssentialFeedAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedAppTests.swift; sourceTree = "<group>"; };
+		9277DE2C2547F31500AA3AA9 /* RemoteFeedLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoaderTests.swift; sourceTree = "<group>"; };
 		9277DE2E2547F31500AA3AA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9277DE332547F31500AA3AA9 /* EssentialFeedAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9277DE372547F31500AA3AA9 /* EssentialFeedAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedAppUITests.swift; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 		9277DE2B2547F31500AA3AA9 /* EssentialFeedAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				9277DE2C2547F31500AA3AA9 /* EssentialFeedAppTests.swift */,
+				9277DE2C2547F31500AA3AA9 /* RemoteFeedLoaderTests.swift */,
 				9277DE2E2547F31500AA3AA9 /* Info.plist */,
 			);
 			path = EssentialFeedAppTests;
@@ -288,7 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9277DE2D2547F31500AA3AA9 /* EssentialFeedAppTests.swift in Sources */,
+				9277DE2D2547F31500AA3AA9 /* RemoteFeedLoaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
