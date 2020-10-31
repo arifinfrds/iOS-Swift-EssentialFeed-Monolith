@@ -87,7 +87,7 @@ class RemoteFeedLoaderTests: XCTestCase {
         })
     }
     
-    // 27:50
+    
     func test_load_deliversItemsOn200HTTPResponseWithJSONList() {
         let (sut, client) = makeSUT()
         
