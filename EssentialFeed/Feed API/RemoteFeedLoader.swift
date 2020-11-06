@@ -50,6 +50,7 @@ public final class RemoteFeedLoader {
                     } catch {
                         completion(.failure(.invalidData))
                     }
+                    return
                 }
                 completion(.failure(.invalidData))
                 
