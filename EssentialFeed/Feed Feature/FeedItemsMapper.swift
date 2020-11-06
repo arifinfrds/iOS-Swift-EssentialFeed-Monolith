@@ -11,6 +11,9 @@ internal final class FeedItemsMapper {
     
     private struct Root: Decodable {
         let items: [Item]
+        var feeds: [FeedItem] {
+            return items.map { $0.feedItem }
+        }
     }
 
     private struct Item: Decodable {
@@ -35,8 +38,7 @@ internal final class FeedItemsMapper {
         guard response.statusCode == OK_200, let root = try? JSONDecoder().decode(Root.self, from: data) else {
             return .failure(.invalidData)
         }
-        let feedItems = root.items.map { $0.feedItem }
-        return .success(feedItems)
+        return .success(root.feeds)
     }
     
 }
