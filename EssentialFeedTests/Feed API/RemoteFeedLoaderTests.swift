@@ -1,5 +1,5 @@
 //
-//  EssentialFeedTests.swift
+//  RemoteFeedLoaderTests.swift
 //  EssentialFeedTests
 //
 //  Created by Arifin Firdaus on 27/10/20.
