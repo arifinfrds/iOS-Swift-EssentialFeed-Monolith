@@ -47,7 +47,7 @@ class RemoteFeedLoaderTests: XCTestCase {
         // given
         let (sut, client) = makeSUT()
         
-        expect(sut, toCompleteWithResult: .failure(RemoteFeedLoader.Error.connectivity), when: {
+        expect(sut, toCompleteWithResult: failure(.connectivity), when: {
             let clientError = NSError(domain: "error", code: 1, userInfo: nil)
             client.complete(with: clientError)
         })
@@ -60,7 +60,7 @@ class RemoteFeedLoaderTests: XCTestCase {
         
         let codes = [199, 201, 300, 400, 500]
         for (index, code) in codes.enumerated() {
-            expect(sut, toCompleteWithResult: .failure(RemoteFeedLoader.Error.invalidData), when: {
+            expect(sut, toCompleteWithResult: failure(.invalidData), when: {
                 let json = makeItemsJSON([])
                 client.complete(withStatusCode: code, data: json, at: index)
                 capturedErrors.removeAll()
@@ -72,7 +72,7 @@ class RemoteFeedLoaderTests: XCTestCase {
         // given
         let (sut, client) = makeSUT()
         
-        expect(sut, toCompleteWithResult: .failure(RemoteFeedLoader.Error.invalidData), when: {
+        expect(sut, toCompleteWithResult: failure(.invalidData), when: {
             let invalidJSON = Data("invalid-json".utf8)
             client.complete(withStatusCode: 200, data: invalidJSON)
         })
@@ -126,7 +126,9 @@ class RemoteFeedLoaderTests: XCTestCase {
         XCTAssertTrue(capturedResults.isEmpty)
     }
     
+    
     // MARK: - Helpers
+    
     private func makeSUT(
         url: URL = URL(string: "https://a-url.com")!,
         file: StaticString = #filePath,
@@ -137,6 +139,10 @@ class RemoteFeedLoaderTests: XCTestCase {
         trackForMemoryLeaks(for: sut, file: file, line: line)
         trackForMemoryLeaks(for: client, file: file, line: line)
         return (sut, client)
+    }
+    
+    private func failure(_ error: RemoteFeedLoader.Error) -> RemoteFeedLoader.Result {
+        return .failure(error)
     }
     
     private func trackForMemoryLeaks(for instance: AnyObject, file: StaticString = #filePath, line: UInt = #line) {
