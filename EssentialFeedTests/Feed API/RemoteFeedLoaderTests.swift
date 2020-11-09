@@ -47,7 +47,7 @@ class RemoteFeedLoaderTests: XCTestCase {
         // given
         let (sut, client) = makeSUT()
         
-        expect(sut, toCompleteWithResult: .failure(.connectivity), when: {
+        expect(sut, toCompleteWithResult: .failure(RemoteFeedLoader.Error.connectivity), when: {
             let clientError = NSError(domain: "error", code: 1, userInfo: nil)
             client.complete(with: clientError)
         })
@@ -60,7 +60,7 @@ class RemoteFeedLoaderTests: XCTestCase {
         
         let codes = [199, 201, 300, 400, 500]
         for (index, code) in codes.enumerated() {
-            expect(sut, toCompleteWithResult: .failure(.invalidData), when: {
+            expect(sut, toCompleteWithResult: .failure(RemoteFeedLoader.Error.invalidData), when: {
                 let json = makeItemsJSON([])
                 client.complete(withStatusCode: code, data: json, at: index)
                 capturedErrors.removeAll()
@@ -72,7 +72,7 @@ class RemoteFeedLoaderTests: XCTestCase {
         // given
         let (sut, client) = makeSUT()
         
-        expect(sut, toCompleteWithResult: .failure(.invalidData), when: {
+        expect(sut, toCompleteWithResult: .failure(RemoteFeedLoader.Error.invalidData), when: {
             let invalidJSON = Data("invalid-json".utf8)
             client.complete(withStatusCode: 200, data: invalidJSON)
         })
@@ -187,7 +187,7 @@ class RemoteFeedLoaderTests: XCTestCase {
             case let (LoadFeedResult.success(receivedItems), RemoteFeedLoader.Result.success(expectedItems)):
                 XCTAssertEqual(receivedItems, expectedItems, file: file, line: line)
                 
-            case let (LoadFeedResult.failure(receivedError), RemoteFeedLoader.Result.failure(expectedError)):
+            case let (LoadFeedResult.failure(receivedError as RemoteFeedLoader.Error), RemoteFeedLoader.Result.failure(expectedError as RemoteFeedLoader.Error)):
                 XCTAssertEqual(receivedError, expectedError, file: file, line: line)
                 
             default:
