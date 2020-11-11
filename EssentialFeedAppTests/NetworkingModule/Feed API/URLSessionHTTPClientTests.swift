@@ -33,17 +33,17 @@ class URLSessionHTTPClientTests: XCTestCase {
         sut.get(from: url)
         
         // then
-        XCTAssertEqual(session.requestedURLs, [url])
+        XCTAssertEqual(session.receivedURLs, [url])
     }
     
     
     // MARK: - Helpers
     
     private class URLSessionSpy: URLSession {
-        var requestedURLs: [URL] = []
+        var receivedURLs: [URL] = []
         
         override func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
-            requestedURLs.append(url)
+            receivedURLs.append(url)
             return FakeURLSessionDataTask()
         }
     }
