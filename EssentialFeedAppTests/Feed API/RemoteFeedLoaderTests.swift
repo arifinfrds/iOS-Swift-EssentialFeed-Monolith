@@ -6,7 +6,7 @@
 //
 
 import XCTest
-import EssentialFeed
+@testable import EssentialFeedApp
 
 class RemoteFeedLoaderTests: XCTestCase {
     
@@ -86,7 +86,6 @@ class RemoteFeedLoaderTests: XCTestCase {
             client.complete(withStatusCode: 200, data: emptyJSONList)
         })
     }
-    
     
     func test_load_deliversItemsOn200HTTPResponseWithJSONList() {
         let (sut, client) = makeSUT()
