@@ -11,6 +11,30 @@ import XCTest
 class EssentialFeedAppAPIEndToEndTests: XCTestCase {
     
     func test_endToEndServerGETFeedResult_matchesFixedTestsAccountData() {
+        // when & then
+        switch getFeedResult() {
+        case let .success(items)?:
+            XCTAssertEqual(items.count, 8)
+            XCTAssertEqual(items[0], makeExpectedItem(at: 0))
+            XCTAssertEqual(items[1], makeExpectedItem(at: 1))
+            XCTAssertEqual(items[2], makeExpectedItem(at: 2))
+            XCTAssertEqual(items[3], makeExpectedItem(at: 3))
+            XCTAssertEqual(items[4], makeExpectedItem(at: 4))
+            XCTAssertEqual(items[5], makeExpectedItem(at: 5))
+            XCTAssertEqual(items[6], makeExpectedItem(at: 6))
+            XCTAssertEqual(items[7], makeExpectedItem(at: 7))
+            
+        case let .failure(error)?:
+            XCTFail("Expected successful feed result, got \(error) instead.")
+        default:
+            XCTFail("Expected successful feed result, get no result instead.")
+        }
+    }
+    
+    
+    // MARK: - Helpers
+    
+    func getFeedResult() -> LoadFeedResult? {
         // given
         let testServerURL = "https://static1.squarespace.com/static/5891c5b8d1758ec68ef5dbc2/t/5c52cdd0b8a045df091d2fff/1548930512083/feed-case-study-test-api-feed.json"
         let url = URL(string: testServerURL)!
@@ -26,28 +50,8 @@ class EssentialFeedAppAPIEndToEndTests: XCTestCase {
         }
         wait(for: [exp], timeout: 5.0)
         
-        // then
-        switch receivedResult {
-        case let .success(items):
-            XCTAssertEqual(items.count, 8)
-            XCTAssertEqual(items[0], makeExpectedItem(at: 0))
-            XCTAssertEqual(items[1], makeExpectedItem(at: 1))
-            XCTAssertEqual(items[2], makeExpectedItem(at: 2))
-            XCTAssertEqual(items[3], makeExpectedItem(at: 3))
-            XCTAssertEqual(items[4], makeExpectedItem(at: 4))
-            XCTAssertEqual(items[5], makeExpectedItem(at: 5))
-            XCTAssertEqual(items[6], makeExpectedItem(at: 6))
-            XCTAssertEqual(items[7], makeExpectedItem(at: 7))
-            
-        case let .failure(error):
-            XCTFail("Expected successful feed result, got \(error) instead.")
-        default:
-            XCTFail("Expected successful feed result, get no result instead.")
-        }
+        return receivedResult
     }
-    
-    
-    // MARK: - Helpers
     
     private func makeExpectedItem(at index: Int) -> FeedItem {
         return FeedItem(
